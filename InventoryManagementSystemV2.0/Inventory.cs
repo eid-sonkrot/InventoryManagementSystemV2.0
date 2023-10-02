@@ -31,7 +31,7 @@ namespace InventoryManagementSystemV2
         }
         public void FindProduct(string name)
         {
-            if (this.Products.Find(x => x.Name.Equals(name)) != null)
+            if (this.Products.Find(x => x.Name.Equals(name)) is not null)
             {
 
                 var product = this.Products.Find(x => x.Name.Equals(name));
@@ -63,7 +63,7 @@ namespace InventoryManagementSystemV2
         }
         public void EditProduct(string name)
         {
-            if (this.Products.Find(x => x.Name.Equals(name)) != null)
+            if (this.Products.Find(x => x.Name.Equals(name)) is not  null)
             {
 
                 var product = this.Products.Find(x => x.Name.Equals(name));
@@ -113,7 +113,7 @@ namespace InventoryManagementSystemV2
         }
         public void RemoveProduct(string name)
         {
-            if (this.Products.Find(x => x.Name.Equals(name)) != null)
+            if (this.Products.Find(x => x.Name.Equals(name)) is not null)
             {
                 var product = this.Products.Find(x => x.Name.Equals(name));
                 this.Products.Remove(product);
